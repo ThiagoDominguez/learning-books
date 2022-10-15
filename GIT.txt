@@ -1,0 +1,19 @@
+
+para iniciar un repositorio desde 0 en este caso hay que reemplazar donde dice libros por el nombre de tu repositorio ,
+recordemos que el repositorio lo debemos hacer dentro de la carpeta que tenga todo nuestro proyecto y tambien donde
+dice mi nombre cambiarlo por su nombre de usuario 
+
+echo "# libros" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ThiagoDominguez/libros.git
+git push -u origin main
+
+
+Para subir a un repositorio anteriormente creado desde github
+
+git remote add origin https://github.com/ThiagoDominguez/libros.git
+git branch -M main
+git push -u origin main
