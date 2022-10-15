@@ -1,19 +1,39 @@
 
-para iniciar un repositorio desde 0 en este caso hay que reemplazar donde dice libros por el nombre de tu repositorio ,
-recordemos que el repositorio lo debemos hacer dentro de la carpeta que tenga todo nuestro proyecto y tambien donde
-dice mi nombre cambiarlo por su nombre de usuario 
-
-echo "# libros" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/ThiagoDominguez/libros.git
-git push -u origin main
 
 
-Para subir a un repositorio anteriormente creado desde github
+Dentro de la carpeta del proyecto
 
-git remote add origin https://github.com/ThiagoDominguez/libros.git
-git branch -M main
-git push -u origin main
+1- git init //Para iniciar el repositorio local
+
+2- git add //Para agregar los archivos al repositorio local, luego del add agregagamos 
+los archivos y si son todos podemos poner . y agregara a todos.
+
+-- git status // Para ver el estado de los archivos, lo podemos ejecutar en cualquier momento , por eso no es parte del 
+item 3. Es recomendado hacerlo cada vez que ejecutemos un comando que agregue o elimine archivos, incluso luego de subir
+los archivos al repositorio remoto en la nube
+
+
+3- git commit -m " " // El commit se hace siempre despues de agregar archivos que sabemos que van a ir al repositorio
+dentro de las comillas pondremos un mensaje descriptivo ya que el commit se utiliza para decir que cambios se realizaron.
+
+4- Luego teniendo previamente creada una cuenta en github , crearemos un repositorio en la nube y copiaremos su url HTTPS
+y agregaremos el repositorio remoto 
+
+5- git add remote origin URL // Para agregar al repositorio remoto  y luego de la palabra origin pondremos la URL HTTPS 
+que copiamos desde github
+
+
+6- git push origin master// Para subir al repositorio remoto los archivos , master sera nuestra rama principal por lo cual
+si lo queremos en otra rama deberemos poner el nombre de la otra rama
+
+
+7- Probablemente cuando ejecutemos el punto 6 , github nos arroje una ventana la cual nos pedira un username y luego una contraseña
+el username es tan simple como nuestro mail con el que creamos la cuenta , pero nuestra contraseña no será la de la cuenta, para ello
+necesitaremos un token , para obtenerlo iremos las configuraciones o settings en github.com, del lado izquierdo buscaremos la ultima 
+opcion que dice configuraciones de desarrollador o developer settings, y por ultimo a la izquierda tambien la ultima opcion que dice
+fichas de acceso personal o personal access tokens y alli crearemos un token que podemos darle todos los permisos y lo recomendable 
+seria que expire cada 30 dias por seguridad , pero tambien le podemos dar mas tiempo e incluso poner que no expire, aunque en ese caso
+seria muy importante tambien activar la autenticacion de 2 pasos en la seguridad de github para evitar que ingresen a nuestra cuenta.
+
+8- Una vez hecho el paso 7 , volvemos a intentar el paso 6 y este deberia funcionar sin complicaciones y tambien deberiamos ver el cambio 
+reflejado en github.com dentro de nuestro repositorio
